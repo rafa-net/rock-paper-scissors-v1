@@ -10,7 +10,14 @@ function getComputerChoice(max) {
 }
 
 function getHumanChoice() {
-  return prompt("Please choose rock, paper, or scissors.");
+  return prompt("Please choose between rock, paper, or scissors.");
 }
 
-console.log(getHumanChoice());
+function playRound(humanChoice, computerChoice) {
+  // your code here!
+}
+
+const humanSelection = getHumanChoice();
+const computerSelection = getComputerChoice();
+
+playRound(humanSelection, computerSelection);
