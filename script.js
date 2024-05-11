@@ -1,9 +1,4 @@
-const max = 3;
-
-possibleChoices = ["rock", "paper", "scissors"];
-console.log(possibleChoices[0], possibleChoices[1] + " and " + possibleChoices[2]);
-
-function getComputerChoice () {
+function getComputerChoice(max) {
   let result = Math.floor(Math.random() * max);
   if (result === 0) {
     return "rock";
