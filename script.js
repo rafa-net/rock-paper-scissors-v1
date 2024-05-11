@@ -1,5 +1,8 @@
 const max = 3;
 
+possibleChoices = ["rock", "paper", "scissors"];
+console.log(possibleChoices[0], possibleChoices[1] + " and " + possibleChoices[2]);
+
 function getComputerChoice () {
   let result = Math.floor(Math.random() * max);
   if (result === 0) {
@@ -10,3 +13,9 @@ function getComputerChoice () {
       return "scissors";
   }
 }
+
+function getHumanChoice() {
+  return prompt("Please choose rock, paper, or scissors.");
+}
+
+console.log(getHumanChoice());
