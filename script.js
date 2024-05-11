@@ -17,36 +17,33 @@ function getHumanChoice() {
 }
 
 function playRound(humanChoice, computerChoice) {
+  /* TIE */
   if (humanChoice === computerChoice) {
     return console.log("That's a tie.");
+
+  /* HUMAN PICKS ROCK */
   } else if (humanChoice === "rock" && computerChoice === "scissors") {
     humanScore++;
-    console.log("You win! Rock breaks scissors.")
+    console.log("You win! Rock breaks scissors.");
   } else if (humanChoice === "rock" && computerChoice === "paper") {
     computerScore++;
-    console.log("You lose! Paper wraps around rock.")
+    console.log("You lose! Paper wraps around rock.");
+  
+  /* HUMAN PICKS PAPER */
   } else if (humanChoice === "paper" && computerChoice === "scissors") {
     computerScore++;
-    console.log("You lose! Scissors cuts paper.")
+    console.log("You lose! Scissors cuts paper.");
   } else if (humanChoice === "paper" && computerChoice === "rock") {
     humanScore++;
-    console.log("You win! Paper wraps around rock.")
-  }
-
-      if (humanChoice === "paper" && computerChoice === "rock") {
-      humanScore++;
-      console.log("You win! Rock breaks scissors.")
-    } else if (humanChoice === "paper" && computerChoice === "scissors") {
-      computerScore++;
-      console.log("You lose! Paper wraps around rock.")
-
-        if (humanChoice === "scissors" && computerChoice === "paper") {
-        humanScore++;
-        console.log("You win! Rock breaks scissors.")
-      } else if (humanChoice === "" && computerChoice === "paper") {
-        computerScore++;
-        console.log("You lose! Paper wraps around rock.")
-
+    console.log("You win! Paper wraps around rock.");
+ 
+  /* HUMAN PICKS SCISSORS */
+  } else if (humanChoice === "scissors" && computerChoice === "rock") {
+    computerScore++;
+    console.log("You lose! Rock breaks scissors.");
+  } else if (humanChoice === "scissors" && computerChoice === "paper") {
+    humanScore++;
+    console.log("You win! Scissors cuts paper.")
   }
 }
 
