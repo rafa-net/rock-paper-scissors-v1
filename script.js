@@ -1,3 +1,6 @@
+humanScore = 0;
+computerScore = 0;
+
 function getComputerChoice(max) {
   let result = Math.floor(Math.random() * max);
   if (result === 0) {
