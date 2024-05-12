@@ -51,15 +51,5 @@ function playGame() {
 
   humanScore = 0;
   computerScore = 0;
-  for (let i = 0; i < 5; i++) {
-    const computerSelection = getComputerChoice(choiceConstant);
-    const humanSelection = getHumanChoice().toLowerCase();
-    playRound(humanSelection, computerSelection);
-  } if (computerScore > humanScore) {
-    console.log(`The Computer wins with a score of ${computerScore} to ${humanScore}!`);
-  } else if (humanScore > computerScore) {
-    console.log(`The Human wins with a score of ${humanScore} to ${computerScore}!`);
-  }
-}
 
 playGame();
