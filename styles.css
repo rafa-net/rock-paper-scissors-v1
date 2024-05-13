@@ -1,33 +1,47 @@
-.result-message {
-  animation: fadeIn 2s ease-out;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+
+* {
+  font-family: "Ubuntu Sans", sans-serif;
+  font-style: normal;
+}
+body {
+    background-color: #f5f5dc;
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  25% {
-    opacity: 0.75;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0.75;
-  }
-  100% {
-    opacity: 0;
-  }
+.pageTitle {
+  text-align: center; 
+  font-size: 40px; 
+  padding-top: 10px;
+  margin-top: 80px;
 }
 
-.fade-out {
-  animation: fadeOut 2s ease-in;
+#flexContainer {
+  display: flex;
+  align-items:center;
+  justify-content: space-evenly;
+  padding: 40px 100px;
+  margin: auto 40px;
 }
 
-@keyframes fadeOut
-0% {
-  opacity: 1;
+#rockButton,
+#paperButton,
+#scissorsButton {
+  font-size: 1.2em;
+  padding: 10px 40px;
+  border-radius: 6px;
 }
-100% {
-  opacity: 0;
+
+.human-points, 
+.computer-points {
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#scoreBoardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

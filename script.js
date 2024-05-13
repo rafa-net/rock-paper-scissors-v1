@@ -1,22 +1,19 @@
 let humanScore = 0;
 let computerScore = 0;
 const choices = 3;
-const humanPoints = document.createElement("p");
-  
-  humanPoints.textContent = humanScore;
-  humanPoints.classList.add("human-points");
-  document.body.appendChild(humanPoints);
 
-  const computerPoints = document.createElement("p");
-  computerPoints.textContent = computerScore;
-  computerPoints.classList.add("computer-points");
-  document.body.appendChild(computerPoints);
+const humanPoints = document.createElement("p");
+humanPoints.classList.add("human-points");
+
+const computerPoints = document.createElement("p");
+computerPoints.classList.add("computer-points");
+
 
 function getHumanChoice() {
   const ROCK_BUTTON = document.getElementById("rockButton");
   const PAPER_BUTTON = document.getElementById("paperButton");
   const SCISSORS_BUTTON = document.getElementById("scissorsButton");
-
+  
   ROCK_BUTTON.addEventListener("click", () => {
     const computerChoice = getComputerChoice();
     playRound("rock", computerChoice);
@@ -34,7 +31,7 @@ function getHumanChoice() {
 function playRound(humanChoice, computerChoice) {
   const resultDiv = document.createElement("div");
   resultDiv.classList.add("result-message");
-
+  
   if (humanChoice === computerChoice) {
     resultDiv.textContent = "That's a tie.";
   } else if (
@@ -48,8 +45,13 @@ function playRound(humanChoice, computerChoice) {
     resultDiv.textContent = "You lose!";
     computerScore++;
   }
-  humanPoints.textContent = humanScore;
-  computerPoints.textContent = computerScore;
+
+  const score = document.getElementById(scoreBoardContainer);
+  humanPoints.textContent = "YOUR SCORE: " + humanScore;
+  computerPoints.textContent = "CPU SCORE: " + computerScore;
+  scoreBoardContainer.appendChild(humanPoints);
+  scoreBoardContainer.appendChild(computerPoints);
+ 
   document.body.appendChild(resultDiv);
 
   setTimeout(() => {
