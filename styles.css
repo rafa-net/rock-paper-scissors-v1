@@ -1,0 +1,33 @@
+.result-message {
+  animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.75;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 2s ease-in;
+}
+
+@keyframes fadeOut
+0% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}

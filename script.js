@@ -1,6 +1,16 @@
 let humanScore = 0;
 let computerScore = 0;
-let choices = 3;
+const choices = 3;
+const humanPoints = document.createElement("p");
+  
+  humanPoints.textContent = humanScore;
+  humanPoints.classList.add("human-points");
+  document.body.appendChild(humanPoints);
+
+  const computerPoints = document.createElement("p");
+  computerPoints.textContent = computerScore;
+  computerPoints.classList.add("computer-points");
+  document.body.appendChild(computerPoints);
 
 function getHumanChoice() {
   const ROCK_BUTTON = document.getElementById("rockButton");
@@ -38,8 +48,17 @@ function playRound(humanChoice, computerChoice) {
     resultDiv.textContent = "You lose!";
     computerScore++;
   }
-
+  humanPoints.textContent = humanScore;
+  computerPoints.textContent = computerScore;
   document.body.appendChild(resultDiv);
+
+  setTimeout(() => {
+    resultDiv.classList.remove("result-message"); 
+    resultDiv.classList.add("fade-out");
+    setTimeout(() => {
+      resultDiv.remove(); 
+    },1000);
+  }, 2000); 
 }
 
 function getComputerChoice() {
@@ -52,13 +71,4 @@ function getComputerChoice() {
     return "scissors"
   }
 }
-
-
-/* function getComputerChoice() {
-  const choices = ["rock", "paper", "scissors"];
-  const randomIndex = Math.floor(Math.random() * choices.length);
-  return choices[randomIndex];
-} */
-
-// Call getHumanChoice to set up event listeners for the buttons
 getHumanChoice();
