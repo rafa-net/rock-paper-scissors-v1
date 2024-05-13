@@ -10,7 +10,7 @@ body {
 
 .pageTitle {
   text-align: center; 
-  font-size: 40px; 
+  font-size: 60px; 
   padding-top: 10px;
   margin-top: 80px;
 }
@@ -20,13 +20,14 @@ body {
   align-items:center;
   justify-content: space-evenly;
   padding: 40px 100px;
-  margin: auto 40px;
+  margin: auto 100px;
 }
 
 #rockButton,
 #paperButton,
 #scissorsButton {
   font-size: 1.2em;
+  font-weight: bold;
   padding: 10px 40px;
   border-radius: 6px;
 }
@@ -37,6 +38,7 @@ body {
   font-size: 24px;
   font-weight: 400;
   font-style: normal;
+  margin: 0;
 }
 
 #scoreBoardContainer {
@@ -44,4 +46,9 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#scoreBoardTitle {
+  font-size: 2em;
+  padding-bottom: 10px;
 }
